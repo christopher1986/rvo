@@ -1,0 +1,369 @@
+/* stylelint-disable no-descending-specificity */
+.rvo-mijn-percelen {
+  height: 100vh;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+
+  .rvo-header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .rvo-logo {
+    margin-inline-start: 250px;
+  }
+
+  .rvo-main--mijn-percelen {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+  }
+
+  .rvo-main--mijn-percelen-startpagina {
+    grid-template-columns: 600px 1fr;
+  }
+
+  .rvo-main--mijn-percelen-samenvatting {
+    grid-template-columns: 750px 1fr;
+  }
+
+  .rvo-main--mijn-percelen-sidebar-active {
+    grid-template-columns: 288px 1fr;
+    height: 85vh;
+  }
+
+  .rvo-main-mijn-percelen--sidebar-menu {
+    background-color: #f1f5f9;
+    padding-block-end: var(--rvo-space-2xl);
+    padding-block-start: var(--rvo-space-2xl);
+    padding-inline-end: var(--rvo-space-2xl);
+    padding-inline-start: var(--rvo-space-2xl);
+
+    .rvo-topnav__background {
+      background-color: #f1f5f9;
+    }
+
+    .utrecht-topnav__item--active .utrecht-topnav__link {
+      font-weight: 700;
+
+      &::before {
+        opacity: 100%;
+      }
+    }
+
+    .utrecht-topnav__link {
+      color: #475569;
+      font-weight: 400;
+
+      &::before {
+        background-color: var(--rvo-color-hemelblauw);
+        border-radius: var(--rvo-border-radius-sm);
+        content: "";
+        display: block;
+        height: 20px;
+        opacity: 0%;
+        width: 4px;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      &:hover::before,
+      &:focus::before {
+        opacity: 10%;
+      }
+
+      .utrecht-icon {
+        background-color: #475569;
+      }
+    }
+  }
+
+  .rvo-main-mijn-percelen--profiel {
+    h1 {
+      margin-block-start: 16px;
+    }
+
+    padding-block-end: var(--rvo-space-3xl);
+    padding-block-start: var(--rvo-space-2xl);
+    padding-inline-end: var(--rvo-space-3xl);
+    padding-inline-start: var(--rvo-space-3xl);
+  }
+
+  .rvo-main-mijn-percelen--data {
+    padding-block-end: var(--rvo-space-md);
+    padding-block-start: 0;
+    padding-inline-end: var(--rvo-space-md);
+    padding-inline-start: var(--rvo-space-md);
+  }
+
+  .rvo-main-mijn-percelen--sidebar {
+    padding-block-start: var(--rvo-space-xl);
+  }
+
+  .rvo-cards--percelen {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rvo-space-md);
+  }
+
+  .rvo-card--perceel {
+    padding-block-end: 0;
+
+    &.rvo-card--active {
+      position: relative;
+
+      &::after {
+        background-color: var(--rvo-color-wit);
+        border: solid #64748b 1px;
+        border-bottom-width: 0;
+        border-left-width: 0;
+        content: "";
+        display: block;
+        height: 12px;
+        position: absolute;
+        right: -7px;
+        top: 24px;
+        transform: rotate(45deg);
+        width: 12px;
+      }
+    }
+
+    .utrecht-heading-2 {
+      font-size: 18px;
+    }
+
+    .rvo-card-perceel-title,
+    .rvo-card-perceel-content {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .rvo-card-perceel-content {
+      color: #64748b;
+      margin-block-end: var(--rvo-space-md);
+    }
+
+    .rvo-alert {
+      margin-inline-end: -16px;
+      margin-inline-start: -16px;
+      padding-block-end: var(--rvo-space-xs);
+      padding-block-start: var(--rvo-space-xs);
+
+      .utrecht-icon {
+        flex: 16px 0 0;
+      }
+    }
+
+    .rvo-card-perceel-actions {
+      border-top: 1px solid #cbd5e1;
+      display: flex;
+      justify-content: flex-end;
+      margin-inline-end: -16px;
+      margin-inline-start: -16px;
+
+      .utrecht-icon {
+        height: 16px;
+        width: 16px;
+      }
+
+      // .utrecht-button {
+      //   color: var(--rvo-color-donkerblauw);
+      // }
+    }
+  }
+
+  .rvo-perceel-kaart {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  /* @PERCELEN FILTER */
+
+  div.utrecht-form-fieldset.rvo-percelen-filter-form {
+    border-radius: var(--rvo-border-radius-sm);
+    margin-block-end: 0;
+
+    .utrecht-form-field {
+      margin-block-end: 0;
+      margin-block-start: 0;
+      margin-inline-end: 0;
+      margin-inline-start: 0;
+    }
+  }
+
+  .rvo-percelen-filter {
+    summary {
+      align-items: center;
+      color: var(--rvo-color-donkerblauw);
+      cursor: pointer;
+      display: inline-flex;
+      font-weight: 700;
+      gap: var(--rvo-space-2xs);
+      list-style: none;
+
+      .rvo-icon-delta-omhoog {
+        display: none;
+      }
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+    }
+
+    &[open] summary {
+      margin-block-end: var(--rvo-space-xs);
+      .rvo-icon-delta-omhoog {
+        display: inline-flex;
+      }
+
+      .rvo-icon-delta-omlaag {
+        display: none;
+      }
+    }
+  }
+
+  &.rvo-mijn-percelen-perceel--edit {
+    h1 {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+  }
+
+  .rvo-dateinput__part input {
+    text-align: center;
+  }
+
+  .rvo-dateinput__part:first-child input,
+  .rvo-dateinput__part:nth-child(2) input {
+    width: 48px;
+  }
+
+  .rvo-dateinput__part:nth-child(3) input {
+    width: 64px;
+  }
+
+  .rvo-value-information {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rvo-value-information-value {
+    font-weight: 700;
+  }
+
+  .rvo-alert {
+    a {
+      color: var(--rvo-color-donkerblauw);
+      font-weight: 700;
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  a.utrecht-button {
+    text-decoration: none;
+  }
+
+  /* @TABLE */
+
+  .rvo-main--mijn-percelen-table {
+    grid-template-columns: 650px 1fr;
+  }
+
+  .rvo-table {
+    .rvo-table-cell {
+      vertical-align: top;
+
+      .utrecht-button {
+        padding-block-start: 0;
+        padding-inline-start: 0;
+      }
+    }
+
+    .rvo-table-cell:not(first-child) {
+      width: 40px;
+    }
+  }
+
+  .rvo-table-row--alert {
+    .rvo-table-cell {
+      padding-block-end: 0;
+      padding-block-start: 0;
+      padding-inline-end: 0;
+      padding-inline-start: 0;
+    }
+
+    .rvo-alert {
+      margin-block-start: -1px;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .rvo-value-line-through {
+    text-decoration: line-through;
+  }
+
+  .rvo-fake-checkbox summary::-webkit-details-marker,
+  .rvo-fake-checkbox summary::marker {
+    display: none;
+  }
+
+  .rvo-fake-checkbox summary {
+    display: flex;
+    gap: var(--rvo-space-xs);
+    position: relative;
+  }
+
+  .rvo-fake-checkbox summary::before {
+    background-color: var(--rvo-color-wit);
+    border: 1px solid var(--rvo-color-logoblauw);
+    border-radius: var(--rvo-border-radius-sm);
+    content: "";
+    display: block;
+    height: 24px;
+    width: 24px;
+  }
+
+  .rvo-fake-checkbox[open] summary::after {
+    background-color: var(--rvo-color-logoblauw);
+    border-radius: var(--rvo-border-radius-sm);
+    content: "";
+    display: block;
+    height: 20px;
+    left: 2px;
+    position: absolute;
+    top: 3px;
+    width: 21px;
+  }
+
+  .rvo-instellingen {
+    text-align: end;
+
+    .utrecht-button {
+      padding-block-end: 0;
+      padding-block-start: 0;
+      padding-inline-end: 0;
+      padding-inline-start: 0;
+    }
+
+    .utrecht-icon {
+      height: 16px;
+      width: 16px;
+    }
+  }
+}

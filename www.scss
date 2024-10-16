@@ -1,0 +1,180 @@
+.rvo-paars {
+  --rvo-color-hemelblauw: #42145f;
+  --rvo-color-donkerblauw: #42145f;
+
+  .utrecht-page-footer,
+  .rvo-footer-bg {
+    background-color: #42145f;
+  }
+}
+
+.rvo-lichtblauw {
+  --rvo-color-hemelblauw: var(--rvo-color-logoblauw);
+  --rvo-color-donkerblauw: var(--rvo-color-logoblauw);
+
+  .utrecht-page-footer,
+  .rvo-footer-bg,
+  .rvo-rhs-update .rvo-hero .utrecht-heading-1,
+  .rvo-rhs-update .rvo-card.rvo-card--full-colour.rvo-card--hemelblauw,
+  .utrecht-button--primary-action {
+    background-color: var(--rvo-color-lichtblauw);
+    color: var(--rvo-color-logoblauw);
+
+    a,
+    a:hover,
+    a:focus,
+    h3.rvo-footer-menu-title {
+      color: var(--rvo-color-logoblauw) !important;
+    }
+
+    .rvo-icon {
+      background-color: var(--rvo-color-logoblauw);
+    }
+  }
+}
+
+.rvo-lichtblauwhemelsblauw {
+  .utrecht-page-footer,
+  .rvo-footer-bg,
+  .rvo-rhs-update .rvo-hero .utrecht-heading-1,
+  .rvo-rhs-update .rvo-card.rvo-card--full-colour.rvo-card--hemelblauw,
+  .utrecht-button--primary-action {
+    background-color: var(--rvo-color-lichtblauw);
+    border-color: var(--rvo-color-lichtblauw);
+    color: var(--rvo-color-logoblauw);
+
+    a,
+    a:hover,
+    a:focus,
+    h3.rvo-footer-menu-title {
+      color: var(--rvo-color-logoblauw) !important;
+    }
+
+    .rvo-icon {
+      background-color: var(--rvo-color-logoblauw);
+    }
+  }
+}
+
+.rvo-www {
+  --rvo-color-zwart: var(--rvo-color-logoblauw);
+
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+
+  .rvo-details {
+    margin-block-end: var(--rvo-space-md);
+
+    .rvo-icon-delta-omlaag {
+      display: none;
+    }
+  }
+
+  .rvo-hide {
+    display: none;
+  }
+
+  .rvo-details-summary {
+    cursor: pointer;
+    font-weight: var(--rvo-font-weight-bold);
+    list-style: none;
+  }
+
+  .rvo-details[open] {
+    .rvo-details-summary {
+      margin-block-end: var(--rvo-space-sm);
+    }
+
+    .rvo-icon-delta-omhoog {
+      display: none;
+    }
+
+    .rvo-icon-delta-omlaag {
+      display: block;
+    }
+  }
+
+  .rvo-details .utrecht-form-field {
+    margin-block-end: 0;
+  }
+
+  // NAVIGATION //
+
+  .rvo-topnav {
+    /* Hide topnav on smaller screens */
+    display: none;
+
+    @media (min-width: 1080px) {
+      display: block;
+    }
+  }
+
+  .rvo-responsive-menu .rvo-topnav {
+    display: flex;
+  }
+
+  .rvo-rhs-update .rvo-responsive-menu > .rvo-responsive-menu-toggle {
+    @media (min-width: 1080px) {
+      display: none;
+    }
+  }
+
+  .rvo-responsive-menu[open] > .rvo-responsive-menu-toggle::after {
+    left: 262px;
+  }
+
+  // HERO //
+
+  .rvo-hero .utrecht-heading-1 {
+    margin-block-end: 0;
+  }
+
+  // MAIN //
+
+  .rvo-main--www,
+  .rvo-section--www {
+    padding-block-end: var(--rvo-space-2xl);
+    padding-block-start: var(--rvo-space-md);
+    padding-inline-end: var(--rvo-space-md);
+    padding-inline-start: var(--rvo-space-md);
+  }
+
+  .rvo-section--www {
+    padding-block-start: var(--rvo-space-xl);
+  }
+
+  .rvo-main--content-page {
+    padding-block-start: var(--rvo-space-2xl);
+  }
+
+  // HEADING //
+
+  .rvo-heading-subtitle {
+    display: block;
+    font-size: var(--rvo-font-size-lg);
+    font-style: italic;
+    font-weight: var(--rvo-font-weight-normal);
+    line-height: 150%;
+  }
+
+  // CARDS GRID //
+  @media (min-width: 1080px) {
+    .rvo-cards .rvo-cards-grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  .rvo-cards--overzichten {
+    .utrecht-heading-3 {
+      font-size: var(--rvo-font-size-lg);
+    }
+  }
+
+  // FEEDBACK //
+
+  .rvo-feedback .rvo-layout-row {
+    justify-content: center;
+  }
+}

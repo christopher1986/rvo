@@ -1,0 +1,5 @@
+.rvo-demopage-relatienummer {
+  .rvo-link--rn:focus::after {
+    content: attr(title);
+  }
+}
